@@ -30,11 +30,11 @@ The Concert Ticket Reservation API is a simple service for managing concert tick
 2. Connfigure the PostgreSQL database by updating the application.properties file with your database details.
    ```path
    /ticket-api/src/main/resources/application.properties
-4. Build and run the project:
-       ```bash
-       cd concert-ticket-reservation-api
-       mvn spring-boot:run
-   By default, the API can be accessible at `http://localhost:8080`.
+4. Build and run the project (By default, the API can be accessible at `http://localhost:8080`) :
+   ```bash
+   cd concert-ticket-reservation-api
+   mvn spring-boot:run
+
 5. Restore the backup file `ticket-api/db-file/ticket-concert-db.tar`
 ## API Endpoints
 ### Search Available Concerts
