@@ -4,6 +4,25 @@
 
 The Concert Ticket Reservation API is a simple service for managing concert ticket reservations. It provides endpoints for searching available concerts and booking tickets.
 
+### Database Desain 
+#### ERD
+![Database Diagram](https://github.com/heri93/ticket-api/blob/main/erd.jpg)
+- `Concert` have many tickets, because in one concert have some ticket type. Such as VVIP, VIP, Festival, etc. So the relationship between the `concert` table and `ticket` is 1 to many.
+- `Booking` table have field of customer data. There are customer name and phone number.
+- The `booking` table has a relationship to the `ticket` table, because one type of ticket can be purchased by several customers according to seat availability or stock.
+#### Concert Table
+- `concert_name` : Name of concert
+- `location` : Lokation of concert
+- `concert_date` : Date of concert
+#### Ticket Table
+- `concert_id` : ID of concert table
+- `ticket_type` : Type of ticket example VVIP, VIP, Festival, etc
+- `price` : Price of ticket
+- `available_seat` : number of available tickets
+#### Booking Table
+- `ticket_id` : ID of ticket table
+- `customer_name` : Customer name
+- `phone_number` : Phone number of customer
 ## Tech Stack
 
 - Java (min: JDK 8)
